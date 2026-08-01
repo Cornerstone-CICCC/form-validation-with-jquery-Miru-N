@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Paw Message Board</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <main class="page-container">
+
+    <section class="form-card">
+      <header class="form-card__header">
+
+        <div class="dog-icon" aria-hidden="true">
+          🐶
+        </div>
+
+        <div>
+          <p class="form-card__eyebrow">
+            JQUERY ASSIGNMENT
+          </p>
+
+          <h1>Share Your Message</h1>
+
+          <p class="form-card__description">
+            Write a paw-some message with a maximum of
+            140 characters.
+          </p>
+        </div>
+
+      </header>
+
+      <form id="message-form" novalidate>
+
+        <label for="message">
+          Your message
+        </label>
+
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          placeholder="Write your message here..."
+        ></textarea>
+
+        <div class="form-status">
+
+          <p
+            id="error-message"
+            class="error-message"
+            role="alert"
+            aria-live="polite"
+          ></p>
+
+          <p id="character-count">
+            0 / 140
+          </p>
+
+        </div>
+
+        <button type="submit">
+          Send Message
+          <span aria-hidden="true">🐾</span>
+        </button>
+
+      </form>
+    </section>
+
+    <section class="messages-section">
+
+      <div class="messages-section__heading">
+        <div class="paw-icon" aria-hidden="true">
+          🐾
+        </div>
+
+        <h2>Submitted Messages</h2>
+      </div>
+
+      <div id="message-list">
+        <p class="empty-message">
+          No messages have been submitted yet.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
